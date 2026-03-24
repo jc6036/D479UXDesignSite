@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="page-shell">
+                <div class="nav-bar">
+                    <a class="site-brand" href="home.html">Welcome to Taniti!</a>
+                    <nav class="nav-links" aria-label="Primary navigation">
+                        <a class="nav-button" href="home.html">Home</a>
+                        <a class="nav-button" href="about.html">About the Island</a>
+                        <a class="nav-button" href="experiences.html">Experiences</a>
+                        <a class="nav-button" href="accommodations.html">Accommodations</a>
+                        <a class="nav-button" href="booking.html">Booking</a>
+                        <a class="nav-button" href="contact.html">Contact Us</a>
+                        <a class="nav-button" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="page-shell">
+                <section class="content-placeholder" aria-label="Main content area">
+                    <div class="contact-layout">
+                        <div class="contact-copy">
+                            <h1>Contact Us</h1>
+                            <p>
+                                Send us your question and a member of the Taniti team will follow
+                                up with you shortly.
+                            </p>
+                        </div>
+
+                        <form class="contact-form" id="contact-form">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" required />
+
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" required />
+
+                            <label for="inquiry">Inquiry</label>
+                            <textarea id="inquiry" name="inquiry" rows="6" required></textarea>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="page-shell">
+                <div class="nav-bar">
+                    <a class="site-brand" href="home.html">Welcome to Taniti!</a>
+                    <nav class="nav-links" aria-label="Footer navigation">
+                        <a class="nav-button" href="home.html">Home</a>
+                        <a class="nav-button" href="about.html">About the Island</a>
+                        <a class="nav-button" href="experiences.html">Experiences</a>
+                        <a class="nav-button" href="accommodations.html">Accommodations</a>
+                        <a class="nav-button" href="booking.html">Booking</a>
+                        <a class="nav-button" href="contact.html">Contact Us</a>
+                        <a class="nav-button" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const contactForm = document.getElementById("contact-form");
+
+            contactForm.addEventListener("submit", (event) => {
+                if (!contactForm.checkValidity()) {
+                    return;
+                }
+
+                event.preventDefault();
+                alert("Message Sent! Someone will contact you shortly.");
+                contactForm.reset();
+            });
+        </script>
+    </body>
+</html>

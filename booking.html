@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Booking</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="page-shell">
+                <div class="nav-bar">
+                    <a class="site-brand" href="home.html">Welcome to Taniti!</a>
+                    <nav class="nav-links" aria-label="Primary navigation">
+                        <a class="nav-button" href="home.html">Home</a>
+                        <a class="nav-button" href="about.html">About the Island</a>
+                        <a class="nav-button" href="experiences.html">Experiences</a>
+                        <a class="nav-button" href="accommodations.html">Accommodations</a>
+                        <a class="nav-button" href="booking.html">Booking</a>
+                        <a class="nav-button" href="contact.html">Contact Us</a>
+                        <a class="nav-button" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="page-shell">
+                <section class="content-placeholder" aria-label="Main content area">
+                    <div class="contact-layout">
+                        <div class="contact-copy">
+                            <h1>Book Your Experience</h1>
+                            <p>
+                                Choose a service and send your request. A member of the Taniti
+                                team will follow up to confirm the details.
+                            </p><br><br>
+                            <p>
+                                <b>If you prefer to talk to someone on the phone, please call 555-555-5555, and a member
+                                of our team will assist you with booking.</b>
+                            </p>
+                        </div>
+
+                        <form class="contact-form" id="booking-form">
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="total-vacation">Total Vacation Package</option>
+                                <option value="romantic-getaway">Romantic Getaway Package</option>
+                                <option value="snorkeling-tour">Snorkeling Tour</option>
+                                <option value="fishing-charter">Fishing Charter</option>
+                                <option value="rainforest-tour">Rainforest Tour</option>
+                                <option value="helicopter-ride">Helicopter Tour</option>
+                                <option value="volcano-tour">Volcano Tour</option>
+                                <option value="resort-stay">Resort Stay</option>
+                                <option value="hotel-stay">Hotel Stay</option>
+                                <option value="restaurant-reservation">Restaurant Reservation</option>
+                                <option value="car-rental">Car Rental</option>
+                                <option value="golf">Round of Golf</option>
+                                <option value="bed-n-breakfast">Bed and Breakfast Stay</option>
+                                <option value="private-rental">Private Rental Stay</option>
+                            </select>
+
+                            <label for="date">Date</label>
+                            <input id="date" name="date" type="date" required />
+
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" required />
+
+                            <label for="phone">Phone</label>
+                            <input id="phone" name="phone" type="tel" required />
+
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" required />
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="page-shell">
+                <div class="nav-bar">
+                    <a class="site-brand" href="home.html">Welcome to Taniti!</a>
+                    <nav class="nav-links" aria-label="Footer navigation">
+                        <a class="nav-button" href="home.html">Home</a>
+                        <a class="nav-button" href="about.html">About the Island</a>
+                        <a class="nav-button" href="experiences.html">Experiences</a>
+                        <a class="nav-button" href="accommodations.html">Accommodations</a>
+                        <a class="nav-button" href="booking.html">Booking</a>
+                        <a class="nav-button" href="contact.html">Contact Us</a>
+                        <a class="nav-button" href="faq.html">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const bookingForm = document.getElementById("booking-form");
+
+            bookingForm.addEventListener("submit", (event) => {
+                if (!bookingForm.checkValidity()) {
+                    return;
+                }
+
+                event.preventDefault();
+                alert("Message Sent! Someone will contact you shortly.");
+                bookingForm.reset();
+            });
+        </script>
+    </body>
+</html>
